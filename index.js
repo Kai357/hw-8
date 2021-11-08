@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
-const Manager = require("./lib/Manager");
+const Engineer = require("./profiles/engineer");
+const Intern = require("./profiles/interns");
+const Manager = require("./profiles/managers");
 
 const employees = [];
 
@@ -15,17 +15,17 @@ function addMember() {
   inquirer
     .prompt([
       {
-        message: "Enter team member's name",
+        message: "Enter persons name",
         name: "name",
       },
       {
         type: "list",
-        message: "Select team member's role",
+        message: "Select persons role",
         choices: ["Engineer", "Intern", "Manager"],
         name: "role",
       },
       {
-        message: "Enter team member's id",
+        message: "Enter person's id",
         name: "id",
       },
       {
@@ -45,12 +45,12 @@ function addMember() {
       inquirer
         .prompt([
           {
-            message: `Enter team member's ${roleInfo}`,
+            message: `Enter person's ${roleInfo}`,
             name: "roleInfo",
           },
           {
             type: "list",
-            message: "Would you like to add more team members?",
+            message: "Would you like to add more persons?",
             choices: ["yes", "no"],
             name: "moreMembers",
           },
@@ -75,14 +75,6 @@ function addMember() {
         });
     });
 }
-
-// function renderHtml(memberArray) {
-//     startHtml();
-//     for (const member of memberArray) {
-//         addHtml(member);
-//     }
-//     finishHtml();
-// }
 
 function startHtml() {
   const html = `<!DOCTYPE html>
@@ -177,10 +169,4 @@ function finishHtml() {
   console.log("end");
 }
 
-// addMember();
-// startHtml();
-// addHtml("hi")
-// .then(function() {
-// finishHtml();
-// });
 initApp();
