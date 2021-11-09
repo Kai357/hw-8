@@ -10,6 +10,7 @@
     have npm inquirer installed and clone the repository
     ##instructions
     write node index in the terminal
+    then answer questions and open team.html in your browser
     ##credits
     kai
     ##licenses
