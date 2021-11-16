@@ -19,3 +19,6 @@
     undefined
     ##email
     mordechaigerstley@gmail.com
+
+##video walkthrough
+https://drive.google.com/drive/my-drive
